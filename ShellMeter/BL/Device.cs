@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShellMeter.BL
 {
-    class Device
+    class Device : IDevice
     {
     }
 }

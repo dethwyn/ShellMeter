@@ -7,15 +7,20 @@ using ShellMeter.BL;
 
 namespace ShellMeter
 {
-    class Presenter
+    class DevicePresenter
     {
-        IMainWindow mainWindow;
+        IMainWindow view;
         IDevice device;
 
-        public Presenter(IMainWindow window, IDevice device)
+        public DevicePresenter(IMainWindow window, IDevice device)
         {
-            mainWindow = window;
+            view = window;
             this.device = device;
+        }
+
+        internal void Run()
+        {
+            view.Show();
         }
     }
 }
