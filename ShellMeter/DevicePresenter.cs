@@ -28,7 +28,7 @@ namespace ShellMeter
             var args = (ConnectArguments)e;
             if (args.PortName != null)
             {
-                var result = device.ConnectToDevice();
+                var result = device.ConnectToDevice(args.PortName.ToString());
                 if (result)
                 {
                     view.Connect();
