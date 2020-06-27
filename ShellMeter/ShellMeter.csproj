@@ -89,7 +89,7 @@
     <Compile Include="BL\ImageProcessing.cs" />
     <Compile Include="BL\MeasureResults.cs" />
     <Compile Include="BL\Profilogram.cs" />
-    <Compile Include="ConnectArguments.cs" />
+    <Compile Include="Utility\ConnectArguments.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
