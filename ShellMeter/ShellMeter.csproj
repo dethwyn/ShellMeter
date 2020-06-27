@@ -67,7 +67,10 @@
     <Compile Include="BL\GRBL.cs" />
     <Compile Include="BL\IDevice.cs" />
     <Compile Include="BL\Device.cs" />
-    <Compile Include="BL\Shell.cs" />
+    <Compile Include="BL\ImageProcessing.cs" />
+    <Compile Include="BL\MeasureResults.cs" />
+    <Compile Include="BL\Profilogram.cs" />
+    <Compile Include="ConnectArguments.cs" />
     <Compile Include="IMainWindow.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

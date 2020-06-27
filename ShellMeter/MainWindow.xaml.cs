@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShellMeter.BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,53 @@ namespace ShellMeter
     /// </summary>
     public partial class MainWindow : Window, IMainWindow
     {
+        public event EventHandler ConnectToDeviceClick;
+        public event EventHandler StartProcessClick;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void Connect()
+        {
+            btConnect.Content = "Connect";
+            btConnect.Background = Brushes.Green;
+
+        }
+
+        private void BtConnect_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectToDeviceClick(this, new ConnectArguments(cbPortNames.SelectedItem));
+        }
+
+        public void Disconnect()
+        {
+            btConnect.Content = "Diconnect";
+            btConnect.Background = Brushes.Red;
+        }
+
+        public void SetPortNamesList(string[] result)
+        {
+            foreach (var item in result)
+            {
+                cbPortNames.Items.Add(item);
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Disconnect();
+        }
+
+        public void AppendLogIn()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AppendLogOut()
+        {
+            throw new NotImplementedException();
         }
     }
 }
