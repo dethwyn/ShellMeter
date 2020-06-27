@@ -9,17 +9,13 @@ namespace ShellMeter.BL
 {
     class Device : IDevice
     {
-        private Status connectionStatus;
         private Camera camera;
 
-        public Status ConnectionStatus
-        {
-            get { return connectionStatus; }
-        }
+        public Status ConnectionStatus { get; private set; }
 
         public Device()
         {
-            connectionStatus = Status.Disconnected;
+            ConnectionStatus = Status.Disconnected;
         }
 
         public string[] GetPortNames()
@@ -31,12 +27,12 @@ namespace ShellMeter.BL
         {
             if (ConnectionStatus == Status.Connected)
             {
-                connectionStatus = Status.Disconnected;
+                ConnectionStatus = Status.Disconnected;
                 return false;
             }
             else
             {
-                connectionStatus = Status.Connected;
+                ConnectionStatus = Status.Connected;
                 return true;
             }
 
