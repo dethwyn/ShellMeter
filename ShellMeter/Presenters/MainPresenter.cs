@@ -8,12 +8,12 @@ using ShellMeter.BL;
 
 namespace ShellMeter
 {
-    class DevicePresenter
+    class MainPresenter
     {
         IMainWindow view;
         IDevice device;
 
-        public DevicePresenter(IMainWindow window, IDevice device)
+        public MainPresenter(IMainWindow window, IDevice device)
         {
             view = window;
             this.device = device;

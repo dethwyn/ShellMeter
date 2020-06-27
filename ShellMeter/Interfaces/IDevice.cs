@@ -18,6 +18,6 @@ namespace ShellMeter.BL
         bool ConnectToDevice(string pName);
         string[] GetPortNames();
         List<MeasureResults> MeasureResults { get; }
-
+        void SaveSettings();
     }
 }

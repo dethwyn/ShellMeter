@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShellMeter
 {
-    interface IViewResults
+    interface IResultView
     {
     }
 }

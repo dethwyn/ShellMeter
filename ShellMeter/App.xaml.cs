@@ -17,7 +17,7 @@ namespace ShellMeter
         {
             var window = new MainWindow();
             var device = new Device();
-            var presenter = new DevicePresenter(window, device);
+            var presenter = new MainPresenter(window, device);
             window.Show();
         }
     }

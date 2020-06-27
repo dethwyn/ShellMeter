@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShellMeter.Properties
+namespace ShellMeter
 {
-    interface IViewSettings
+    interface ISettingView
     {
     }
 }

@@ -56,5 +56,10 @@ namespace ShellMeter.BL
                 return true;
             }
         }
+
+        public void SaveSettings()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

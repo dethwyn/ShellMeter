@@ -17,7 +17,7 @@ namespace ShellMeter
     /// <summary>
     /// Логика взаимодействия для ViewResults.xaml
     /// </summary>
-    public partial class ViewResults : Window, IViewResults
+    public partial class ViewResults : Window, IResultView
     {
         public ViewResults()
         {

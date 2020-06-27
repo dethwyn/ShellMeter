@@ -63,15 +63,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="IViewResults.cs" />
-    <Compile Include="Properties\IViewSettings.cs" />
-    <Compile Include="ViewResults.xaml.cs">
-      <DependentUpon>ViewResults.xaml</DependentUpon>
+    <Compile Include="Interfaces\IMainWindow.cs" />
+    <Compile Include="Interfaces\IResultView.cs" />
+    <Compile Include="Interfaces\ISettingView.cs" />
+    <Compile Include="Presenters\ResultPresenter.cs" />
+    <Compile Include="Views\ResultView.xaml.cs">
+      <DependentUpon>ResultView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewSettings.xaml.cs">
-      <DependentUpon>ViewSettings.xaml</DependentUpon>
+    <Compile Include="Presenters\SettingPresenter.cs" />
+    <Compile Include="Views\SettingView.xaml.cs">
+      <DependentUpon>SettingView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -81,28 +84,27 @@
     </Compile>
     <Compile Include="BL\Camera.cs" />
     <Compile Include="BL\GRBL.cs" />
-    <Compile Include="BL\IDevice.cs" />
+    <Compile Include="Interfaces\IDevice.cs" />
     <Compile Include="BL\Device.cs" />
     <Compile Include="BL\ImageProcessing.cs" />
     <Compile Include="BL\MeasureResults.cs" />
     <Compile Include="BL\Profilogram.cs" />
     <Compile Include="ConnectArguments.cs" />
-    <Compile Include="IMainWindow.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ViewResults.xaml">
+    <Page Include="Views\ResultView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewSettings.xaml">
+    <Page Include="Views\SettingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DevicePresenter.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
