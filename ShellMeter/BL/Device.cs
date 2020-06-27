@@ -10,6 +10,7 @@ namespace ShellMeter.BL
     class Device : IDevice
     {
         private Camera camera;
+        private GRBL grbl;
 
         public Status ConnectionStatus { get; private set; }
 
@@ -23,19 +24,21 @@ namespace ShellMeter.BL
             return SerialPort.GetPortNames();
         }
 
-        public bool ConnectToDevice()
+        public bool ConnectToDevice(string pName)
         {
+            grbl = new GRBL(0, 0, pName);
             if (ConnectionStatus == Status.Connected)
             {
                 ConnectionStatus = Status.Disconnected;
+                grbl.Connect();
                 return false;
             }
             else
             {
                 ConnectionStatus = Status.Connected;
+                grbl.Disconnect();
                 return true;
             }
-
         }
     }
 }

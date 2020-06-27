@@ -15,7 +15,7 @@ namespace ShellMeter.BL
     interface IDevice
     {
         Status ConnectionStatus { get; }
-        bool ConnectToDevice();
+        bool ConnectToDevice(string pName);
         string[] GetPortNames();
     }
 }
