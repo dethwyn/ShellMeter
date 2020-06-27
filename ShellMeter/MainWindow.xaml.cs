@@ -33,7 +33,6 @@ namespace ShellMeter
         {
             btConnect.Content = "Connect";
             btConnect.Background = Brushes.Green;
-
         }
 
         private void BtConnect_Click(object sender, RoutedEventArgs e)
@@ -68,6 +67,11 @@ namespace ShellMeter
         public void AppendLogOut()
         {
             throw new NotImplementedException();
+        }
+
+        private void btStart_Click(object sender, RoutedEventArgs e)
+        {
+            StartProcessClick(this, EventArgs.Empty);
         }
     }
 }

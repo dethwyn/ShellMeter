@@ -10,6 +10,7 @@ namespace ShellMeter.BL
     class Device : IDevice
     {
         private Status connectionStatus;
+        private Camera camera;
 
         public Status ConnectionStatus
         {
