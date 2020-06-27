@@ -18,6 +18,21 @@ namespace ShellMeter.BL
         public Device()
         {
             ConnectionStatus = Status.Disconnected;
+            camera = new Camera();
+            grbl = new GRBL();
+            loadSettings();
+        }
+
+        private void loadSettings()
+        {
+            camera.CameraURL = Properties.Settings.Default.cameraURL;
+            camera.Distance = Properties.Settings.Default.distance;
+            camera.Focus = Properties.Settings.Default.focus;
+            camera.MatrixHeight = Properties.Settings.Default.matrixH;
+            camera.MatrixWidth = Properties.Settings.Default.matrixW;
+
+            grbl.XMax = Properties.Settings.Default.maxX;
+            grbl.YMax = Properties.Settings.Default.maxY;
         }
 
         public string[] GetPortNames()

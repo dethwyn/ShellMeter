@@ -9,16 +9,18 @@ namespace ShellMeter.BL
 {
     public class GRBL
     {
-        private double max_x;
-        private double max_y;
+        public double XMax { get; set; }
+        public double YMax { get; set; }
         private double x;
         private double y;
         private SerialPort grblPort;
 
+        public GRBL() { }
+
         public GRBL(double mX, double mY, string pName)
         {
-            max_x = mX;
-            max_y = mY;
+            XMax = mX;
+            YMax = mY;
             grblPort = new SerialPort(pName, 115200);
             x = 0;
             y = 0;

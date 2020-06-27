@@ -27,7 +27,6 @@
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-
         </Grid.ColumnDefinitions>
         <TextBlock TextWrapping="WrapWithOverflow" Grid.Row="1" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Center" Margin="10,5,10,5">Select port name</TextBlock>
         <ComboBox x:Name="cbPortNames" Grid.Row="1" Grid.Column="1" Style="{StaticResource ConnectPanel}"></ComboBox>
@@ -37,11 +36,9 @@
         <TextBox x:Name="tbOutputLog" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="10,5,10,5" Foreground="Green"/>
         <TextBox x:Name="tbInputLog" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="10,5,10,5" Foreground="Red"/>
         <Menu Grid.Row="0" Grid.ColumnSpan="3">
-            <MenuItem Header="File">
-                <MenuItem Header="Settings"></MenuItem>
-                <Separator/>
-                <MenuItem Header="Exit"></MenuItem>
-            </MenuItem>
+            <MenuItem Header="Export"></MenuItem>
+            <MenuItem Header="Settings"></MenuItem>
+            <MenuItem Header="Exit"></MenuItem>
         </Menu>
     </Grid>
 
