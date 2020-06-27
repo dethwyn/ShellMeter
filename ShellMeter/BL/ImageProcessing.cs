@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ShellMeter.BL
 {
-    class ImageProcessing
+    static class ImageProcessing
     {
+        public static Profilogram Analyze()
+        {
+            return new Profilogram();
+        }
     }
 }

@@ -24,5 +24,9 @@ namespace ShellMeter.BL
             MatrixWidth = mw;
         }
 
+        public Mat GetFrame()
+        {
+            return new Mat();
+        }
     }
 }

@@ -17,5 +17,7 @@ namespace ShellMeter.BL
         Status ConnectionStatus { get; }
         bool ConnectToDevice(string pName);
         string[] GetPortNames();
+        List<MeasureResults> MeasureResults { get; }
+
     }
 }

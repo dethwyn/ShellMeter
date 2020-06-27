@@ -29,14 +29,14 @@ namespace ShellMeter.BL
             return false;
         }
 
-        public bool Connect()
+        public void Connect()
         {
-            return false;
+
         }
 
-        public bool Disconnect()
+        public void Disconnect()
         {
-            return false;
+
         }
 
         public bool MoveToXY(double inX, double inY)

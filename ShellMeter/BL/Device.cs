@@ -12,6 +12,7 @@ namespace ShellMeter.BL
         private Camera camera;
         private GRBL grbl;
 
+        public List<MeasureResults> MeasureResults { get; private set; }
         public Status ConnectionStatus { get; private set; }
 
         public Device()
@@ -30,13 +31,13 @@ namespace ShellMeter.BL
             if (ConnectionStatus == Status.Connected)
             {
                 ConnectionStatus = Status.Disconnected;
-                grbl.Connect();
+                grbl.Disconnect();
                 return false;
             }
             else
             {
                 ConnectionStatus = Status.Connected;
-                grbl.Disconnect();
+                grbl.Connect();
                 return true;
             }
         }
