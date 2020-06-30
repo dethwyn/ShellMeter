@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using ShellMeter.BL;
+using ShellMeter.Utility;
 
 namespace ShellMeter
 {
@@ -13,12 +14,11 @@ namespace ShellMeter
         IMainWindow view;
         IDevice device;
 
-        public MainPresenter(IMainWindow window, IDevice device)
+        public MainPresenter(IMainWindow window, IDevice model)
         {
             view = window;
-            this.device = device;
-
-            var result = device.GetPortNames();
+            device = model;
+            var result = model.GetPortNames();
             view.ShowWindow();
             view.SetPortNamesList(result);
             view.ConnectToDeviceClick += View_ConnectToDeviceClick1;
@@ -38,16 +38,16 @@ namespace ShellMeter
                 device.ConnectToDevice(args.PortName.ToString());
                 if (device.ConnectionStatus == Status.Connected)
                 {
-                    view.ButtonChange();
+                    view.SetButtonConnect();
                 }
                 else
                 {
-                    view.Disconnect();
+                    view.SetButtonDisconnect();
                 }
             }
             else
             {
-                MessageBox.Show("Please select device port");
+                Alerts.ConnectionError();
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using ShellMeter.BL;
+using ShellMeter.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace ShellMeter
             InitializeComponent();
         }
 
-        public void ButtonChange()
+        public void SetButtonConnect()
         {
             btConnect.Content = "Connect";
             btConnect.Background = Brushes.Green;
@@ -43,7 +44,7 @@ namespace ShellMeter
             ConnectToDeviceClick(this, new ConnectArguments(cbPortNames.SelectedItem));
         }
 
-        public void Disconnect()
+        public void SetButtonDisconnect()
         {
             btConnect.Content = "Diconnect";
             btConnect.Background = Brushes.Red;
@@ -59,7 +60,7 @@ namespace ShellMeter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Disconnect();
+            SetButtonDisconnect();
         }
 
         public void AppendLogIn()
@@ -72,6 +73,7 @@ namespace ShellMeter
             throw new NotImplementedException();
         }
 
+        #region Show Window/Close Window
         public void ShowWindow()
         {
             Show();
@@ -81,11 +83,19 @@ namespace ShellMeter
         {
             Close();
         }
+        #endregion
 
         #region Events
         private void btStart_Click(object sender, RoutedEventArgs e)
         {
-            StartProcessClick(this, EventArgs.Empty);
+            try
+            {
+                StartProcessClick(this, EventArgs.Empty);
+            }
+            catch (Exception exp)
+            {
+                Alerts.ShowUnknowError(exp);
+            }
         }
 
         private void exportMenu_Click(object sender, RoutedEventArgs e)

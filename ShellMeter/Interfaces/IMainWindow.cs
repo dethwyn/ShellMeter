@@ -13,7 +13,8 @@ namespace ShellMeter
         void SetPortNamesList(string[] result);
         void ShowWindow();
         void CloseWindow();
-        void ButtonChange(string text, SolidColorBrush color);
+        void SetButtonConnect();
+        void SetButtonDisconnect();
         void AppendLogIn();
         void AppendLogOut();
         event EventHandler ConnectToDeviceClick;

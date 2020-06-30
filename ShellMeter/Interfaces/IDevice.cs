@@ -9,7 +9,7 @@ namespace ShellMeter.BL
     interface IDevice
     {
         Status ConnectionStatus { get; }
-        ConnectToDevice(string pName);
+        void ConnectToDevice(string pName);
         string[] GetPortNames();
         List<MeasureResults> MeasureResults { get; }
         void SaveSettings();
