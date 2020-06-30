@@ -66,6 +66,7 @@
     <Compile Include="Interfaces\IMainWindow.cs" />
     <Compile Include="Interfaces\IResultView.cs" />
     <Compile Include="Interfaces\ISettingView.cs" />
+    <Compile Include="BL\Status.cs" />
     <Compile Include="Presenters\ResultPresenter.cs" />
     <Compile Include="Views\ResultView.xaml.cs">
       <DependentUpon>ResultView.xaml</DependentUpon>

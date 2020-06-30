@@ -40,20 +40,18 @@ namespace ShellMeter.BL
             return SerialPort.GetPortNames();
         }
 
-        public bool ConnectToDevice(string pName)
+        public void ConnectToDevice(string pName)
         {
             grbl = new GRBL(0, 0, pName);
             if (ConnectionStatus == Status.Connected)
             {
                 ConnectionStatus = Status.Disconnected;
                 grbl.Disconnect();
-                return false;
             }
             else
             {
                 ConnectionStatus = Status.Connected;
                 grbl.Connect();
-                return true;
             }
         }
 

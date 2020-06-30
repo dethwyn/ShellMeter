@@ -19,8 +19,15 @@ namespace ShellMeter
             this.device = device;
 
             var result = device.GetPortNames();
+            view.ShowWindow();
             view.SetPortNamesList(result);
             view.ConnectToDeviceClick += View_ConnectToDeviceClick1;
+            view.ExitClick += View_ExitClick;
+        }
+
+        private void View_ExitClick(object sender, EventArgs e)
+        {
+            view.CloseWindow();
         }
 
         private void View_ConnectToDeviceClick1(object sender, EventArgs e)
@@ -28,10 +35,10 @@ namespace ShellMeter
             var args = (ConnectArguments)e;
             if (args.PortName != null)
             {
-                var result = device.ConnectToDevice(args.PortName.ToString());
-                if (result)
+                device.ConnectToDevice(args.PortName.ToString());
+                if (device.ConnectionStatus == Status.Connected)
                 {
-                    view.Connect();
+                    view.ButtonChange();
                 }
                 else
                 {

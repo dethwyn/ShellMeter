@@ -23,13 +23,16 @@ namespace ShellMeter
     {
         public event EventHandler ConnectToDeviceClick;
         public event EventHandler StartProcessClick;
+        public event EventHandler SettingClick;
+        public event EventHandler ExportClick;
+        public event EventHandler ExitClick;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        public void Connect()
+        public void ButtonChange()
         {
             btConnect.Content = "Connect";
             btConnect.Background = Brushes.Green;
@@ -69,9 +72,38 @@ namespace ShellMeter
             throw new NotImplementedException();
         }
 
+        public void ShowWindow()
+        {
+            Show();
+        }
+
+        public void CloseWindow()
+        {
+            Close();
+        }
+
+        #region Events
         private void btStart_Click(object sender, RoutedEventArgs e)
         {
             StartProcessClick(this, EventArgs.Empty);
         }
+
+        private void exportMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ExportClick(this, EventArgs.Empty);
+        }
+
+        private void settingMenu_Click(object sender, RoutedEventArgs e)
+        {
+            SettingClick(this, EventArgs.Empty);
+        }
+
+        private void exitMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ExitClick(this, EventArgs.Empty);
+        }
+        #endregion
+
+
     }
 }
