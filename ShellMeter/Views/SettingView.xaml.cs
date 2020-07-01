@@ -17,11 +17,24 @@ namespace ShellMeter
     /// <summary>
     /// Логика взаимодействия для ViewSettings.xaml
     /// </summary>
-    public partial class ViewSettings : Window, IResultView
+    public partial class ViewSettings : Window, ISettingView
     {
         public ViewSettings()
         {
             InitializeComponent();
+            
+        }
+
+        public event EventHandler SaveSettingClick;
+
+        public void CloseWindow()
+        {
+            Close();
+        }
+
+        public void ShowWindow()
+        {
+            Show();
         }
     }
 }

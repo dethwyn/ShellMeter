@@ -55,9 +55,17 @@ namespace ShellMeter.BL
             }
         }
 
-        public void SaveSettings()
+        public void SaveSettings(Settings data)
         {
-            throw new NotImplementedException();
+            Properties.Settings.Default.cameraURL = data.URL;
+            Properties.Settings.Default.distance = data.Distance;
+            Properties.Settings.Default.focus = data.Focus;
+            Properties.Settings.Default.matrixH = data.MHeight;
+            Properties.Settings.Default.matrixW = data.MWidth;
+
+            Properties.Settings.Default.maxX = data.MaxX;
+            Properties.Settings.Default.maxY = data.MaxY;
+            loadSettings();
         }
     }
 }

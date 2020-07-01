@@ -5,10 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShellMeter"
         mc:Ignorable="d"
-        Title="ViewSettings" Height="450" Width="800">
+        Title="ViewSettings" Height="310" Width="550" MinHeight="310" MinWidth="500">
+    <Window.Resources>
+        <Style  TargetType="TextBox">
+            <Setter Property="ItemsControl.Margin" Value="5,5,5,5"/>
+            <Setter Property="ItemsControl.VerticalContentAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="Left"/>
+        </Style>
+        <Style  TargetType="Label">
+            <Setter Property="ItemsControl.Margin" Value="5,5,5,5"/>
+            <Setter Property="ItemsControl.VerticalContentAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style  TargetType="Button">
+            <Setter Property="ItemsControl.Margin" Value="5,5,5,5"/>
+            <Setter Property="ItemsControl.VerticalContentAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition MaxWidth="180"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -28,13 +45,13 @@
         <Label Grid.Row="4" Grid.Column="0">Camera focus</Label>
         <Label Grid.Row="5" Grid.Column="0">Width of camera sensor</Label>
         <Label Grid.Row="6" Grid.Column="0">Height of camera sensor</Label>
-        <TextBox Grid.Row="0" Grid.Column="1"/>
-        <TextBox Grid.Row="1" Grid.Column="1"/>
-        <TextBox Grid.Row="2" Grid.Column="1"/>
-        <TextBox Grid.Row="3" Grid.Column="1"/>
-        <TextBox Grid.Row="4" Grid.Column="1"/>
-        <TextBox Grid.Row="5" Grid.Column="1"/>
-        <TextBox Grid.Row="6" Grid.Column="1"/>
-        <Button Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Content="Save settings"/>
+        <TextBox x:Name="tbMaxY" Grid.Row="0" Grid.Column="1"/>
+        <TextBox x:Name="tbMaxX" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="tbURL" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="tbDistance" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="tbFocus" Grid.Row="4" Grid.Column="1"/>
+        <TextBox x:Name="tbMW" Grid.Row="5" Grid.Column="1"/>
+        <TextBox x:Name="tbMH" Grid.Row="6" Grid.Column="1"/>
+        <Button x:Name="btSave" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Content="Save settings"/>
     </Grid>
 </Window>
