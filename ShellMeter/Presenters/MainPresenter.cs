@@ -13,7 +13,7 @@ namespace ShellMeter
     {
         IMainWindow view;
         IDevice device;
-
+        
         public MainPresenter(IMainWindow window, IDevice model)
         {
             view = window;

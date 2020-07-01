@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ShellMeter
 {
-    interface ISettingView
+    class SettingArguments
     {
-        void ShowWindow();
-        void CloseWindow();
-        event EventHandler SaveSettingClick();
+        public SettingArguments()
+        {
+
+        }
     }
 }

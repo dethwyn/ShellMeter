@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShellMeter.BL
 {
-    class MeasureResults
+    internal class MeasureResults
     {
     }
 }

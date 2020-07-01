@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShellMeter.BL
 {
-    public class GRBL
+    internal class GRBL
     {
         public double XMax { get; set; }
         public double YMax { get; set; }

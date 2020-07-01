@@ -69,6 +69,7 @@
     <Compile Include="BL\Status.cs" />
     <Compile Include="Presenters\ResultPresenter.cs" />
     <Compile Include="Utility\Alerts.cs" />
+    <Compile Include="Utility\SettingArguments.cs" />
     <Compile Include="Views\ResultView.xaml.cs">
       <DependentUpon>ResultView.xaml</DependentUpon>
     </Compile>

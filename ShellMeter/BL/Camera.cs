@@ -8,7 +8,7 @@ using Emgu.CV;
 
 namespace ShellMeter.BL
 {
-    public class Camera
+    internal class Camera
     {
         private VideoCapture capture;
         public string CameraURL { get; set; }

@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="ViewSettings" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0">Vertical rails lenght</Label>
+        <Label Grid.Row="1" Grid.Column="0">Horizontal rails lenght</Label>
+        <Label Grid.Row="2" Grid.Column="0">Camera URL</Label>
+        <Label Grid.Row="3" Grid.Column="0">Distance to object</Label>
+        <Label Grid.Row="4" Grid.Column="0">Camera focus</Label>
+        <Label Grid.Row="5" Grid.Column="0">Width of camera sensor</Label>
+        <Label Grid.Row="6" Grid.Column="0">Height of camera sensor</Label>
+        <TextBox Grid.Row="0" Grid.Column="1"/>
+        <TextBox Grid.Row="1" Grid.Column="1"/>
+        <TextBox Grid.Row="2" Grid.Column="1"/>
+        <TextBox Grid.Row="3" Grid.Column="1"/>
+        <TextBox Grid.Row="4" Grid.Column="1"/>
+        <TextBox Grid.Row="5" Grid.Column="1"/>
+        <TextBox Grid.Row="6" Grid.Column="1"/>
+        <Button Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Content="Save settings"/>
     </Grid>
 </Window>

@@ -1,6 +1,6 @@
 ﻿namespace ShellMeter.BL
 {
-    enum Status
+    internal enum Status
     {
         Connected,
         Disconnected
